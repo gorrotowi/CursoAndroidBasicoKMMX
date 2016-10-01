@@ -6,6 +6,8 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.RadioButton;
@@ -129,6 +131,29 @@ public class SecondActivity extends AppCompatActivity {
                                 }
                             })
                             .show();
+                }
+            }
+        });
+
+        rdbtnNaranja.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    final MaterialDialog materialDialog = new MaterialDialog.Builder(SecondActivity.this)
+                            .title("Te gusta jugar?")
+                            .customView(R.layout.content_dalog, false)
+                            .positiveText("Si")
+                            .show();
+
+                    Button btnDialog = (Button) materialDialog.findViewById(R.id.btnContentDialog);
+                    btnDialog.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            TextView textView = (TextView) materialDialog.findViewById(R.id.txtContentDialog);
+                            Toast.makeText(SecondActivity.this, textView.getText().toString(), Toast.LENGTH_SHORT).show();
+                        }
+                    });
+
                 }
             }
         });
