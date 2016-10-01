@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">HolaMundo</string>
+    <string name="helloword">Hello World!</string>
+    <string name="escribe_tu_nombre">Escribe tu nombre</string>
+    <string name="di_hola">Di Hola</string>
+    <string name="escribe_tu_edad">Escribe tu Edad</string>
+    <string name="sayhello">Hola %1$s tienes %2$s años</string>
+    <string name="intent_name">name</string>
+</resources>

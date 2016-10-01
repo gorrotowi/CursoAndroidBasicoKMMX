@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">HolaMundo</string>
+    <string name="di_hola">Say Hello</string>
+    <string name="escribe_tu_edad">Write your Age</string>
+    <string name="escribe_tu_nombre">Write your Name</string>
+    <string name="helloword">Hello World!</string>
+    <string name="sayhello">Hello %1$s you have %2$s years old</string>
+</resources>
