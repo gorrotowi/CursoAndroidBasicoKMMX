@@ -2,6 +2,7 @@ package com.kmmx.holamundo;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -11,6 +12,9 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.afollestad.materialdialogs.DialogAction;
+import com.afollestad.materialdialogs.MaterialDialog;
 
 public class SecondActivity extends AppCompatActivity {
 
@@ -66,6 +70,12 @@ public class SecondActivity extends AppCompatActivity {
                                     dialog.dismiss();
                                 }
                             })
+                            .setNeutralButton("Quiero comer", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    dialog.dismiss();
+                                }
+                            })
                             .show();
                 }
             }
@@ -93,6 +103,33 @@ public class SecondActivity extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked)
                     Toast.makeText(SecondActivity.this, "Manzana seleccionada", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        rdbtnPlatano.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    new MaterialDialog.Builder(SecondActivity.this)
+                            .title("Frutas")
+                            .content("Te gustan los platanos?")
+                            .positiveText("Si")
+                            .negativeText("No")
+                            .onPositive(new MaterialDialog.SingleButtonCallback() {
+                                @Override
+                                public void onClick(@NonNull MaterialDialog dialog, @NonNull DialogAction which) {
+                                    TextView txtViewDialog = dialog.getContentView();
+                                    Toast.makeText(SecondActivity.this, txtViewDialog.getText().toString(), Toast.LENGTH_SHORT).show();
+                                }
+                            })
+                            .onNegative(new MaterialDialog.SingleButtonCallback() {
+                                @Override
+                                public void onClick(@NonNull MaterialDialog dialog, @NonNull DialogAction which) {
+                                    Toast.makeText(SecondActivity.this, "No no me gustan", Toast.LENGTH_SHORT).show();
+                                }
+                            })
+                            .show();
+                }
             }
         });
 
