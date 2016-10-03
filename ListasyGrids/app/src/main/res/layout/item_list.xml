@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/imgItemList"
+        android:layout_width="46dp"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/imagen_de_perfil_para_la_lista"
+        android:src="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/txtItemTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/imgItemList"
+        android:layout_toRightOf="@id/imgItemList"
+        android:text="Titulo" />
+
+    <TextView
+        android:id="@+id/txtItemSubTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtItemTitle"
+        android:layout_toEndOf="@id/imgItemList"
+        android:layout_toRightOf="@id/imgItemList"
+        android:text="SubTitulo" />
+
+    <!--<CheckBox-->
+    <!--android:id="@+id/ckItemList"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentEnd="true"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:layout_centerVertical="true" />-->
+
+</RelativeLayout>
