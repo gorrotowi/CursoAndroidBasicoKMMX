@@ -1,5 +1,6 @@
 package com.kmmx.menustoolbar;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -55,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             case android.R.id.home:
                 Toast.makeText(this, "Home Button", Toast.LENGTH_SHORT).show();
+                finish();
                 return true;
             case R.id.opcion2:
                 Toast.makeText(this, "Opcion " + item.getTitle(), Toast.LENGTH_SHORT).show();
@@ -65,5 +67,12 @@ public class MainActivity extends AppCompatActivity {
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        Toast.makeText(this, "Back Pressed", Toast.LENGTH_SHORT).show();
+        startActivity(new Intent(MainActivity.this, MainActivity.class));
+//        super.onBackPressed();
     }
 }
