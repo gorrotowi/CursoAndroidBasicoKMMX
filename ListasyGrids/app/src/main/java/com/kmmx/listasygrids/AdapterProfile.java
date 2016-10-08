@@ -7,10 +7,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.CheckBox;
-import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -56,6 +54,7 @@ public class AdapterProfile extends BaseAdapter {
             holder.imgProfile = (ImageView) fila.findViewById(R.id.imgItemList);
             holder.txtTitulo = (TextView) fila.findViewById(R.id.txtItemTitle);
             holder.txtSubtitle = (TextView) fila.findViewById(R.id.txtItemSubTitle);
+            holder.txtTitulo.setTextColor(context.getResources().getColor(R.color.colorAccent));
 //            holder.checkBox = (CheckBox) fila.findViewById(R.id.ckItemList);
             fila.setTag(holder);
         } else {

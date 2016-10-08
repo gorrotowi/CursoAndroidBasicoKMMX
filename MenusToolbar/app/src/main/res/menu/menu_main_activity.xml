@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:id="@+id/opcion2"
+        android:icon="@mipmap/ic_launcher"
+        android:title="Opcion2"
+        app:showAsAction="withText|always" />
+
+    <item
+        android:id="@+id/opcion3"
+        android:title="Opcion3"
+        app:showAsAction="ifRoom|never" />
+
+    <item
+        android:id="@+id/opcion4"
+        android:title="Opcion4"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/opcion5"
+        android:title="Opcion5"
+        app:showAsAction="collapseActionView">
+
+        <menu>
+
+            <item
+                android:id="@+id/subopcion1"
+                android:title="SubOpcion1"
+                app:showAsAction="ifRoom" />
+
+            <item
+                android:id="@+id/subopcion2"
+                android:title="SubOpcion2"
+                app:showAsAction="ifRoom">
+
+                <menu>
+
+                    <item
+                        android:id="@+id/SubSubopcion1"
+                        android:title="SubSubOpcion1"
+                        app:showAsAction="ifRoom" />
+                </menu>
+
+            </item>
+
+        </menu>
+
+    </item>
+
+</menu>
