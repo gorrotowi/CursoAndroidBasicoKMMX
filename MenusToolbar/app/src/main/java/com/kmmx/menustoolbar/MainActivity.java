@@ -53,6 +53,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
+            case android.R.id.home:
+                Toast.makeText(this, "Home Button", Toast.LENGTH_SHORT).show();
+                return true;
             case R.id.opcion2:
                 Toast.makeText(this, "Opcion " + item.getTitle(), Toast.LENGTH_SHORT).show();
                 return true;
