@@ -1,5 +1,6 @@
 package com.kmmx.sharedpreferences;
 
+import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -26,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         editText = (EditText) findViewById(R.id.edtxMain);
         textViewl = (TextView) findViewById(R.id.txtMain);
 
-        sharedPreferences = getSharedPreferences("nombres", MODE_PRIVATE);
+        sharedPreferences = getSharedPreferences("nombres", Context.MODE_PRIVATE);
 
         String name = sharedPreferences.getString("nombre", getString(R.string.app_name));
         textViewl.setText(name);
