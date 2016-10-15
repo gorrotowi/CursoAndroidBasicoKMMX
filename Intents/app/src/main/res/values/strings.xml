@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Intents</string>
+    <string name="camara_intent_desc">Imagen de camara intent</string>
+</resources>
