@@ -5,6 +5,7 @@ import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
@@ -24,7 +25,7 @@ public class SeconActivity extends BaseActivity {
         btnMail = (Button) findViewById(R.id.btnMail);
         imageView = (ImageView) findViewById(R.id.imgCamera);
 
-//        showToast("Hey!");
+        showToast("Hey!");
     }
 
     @Override
