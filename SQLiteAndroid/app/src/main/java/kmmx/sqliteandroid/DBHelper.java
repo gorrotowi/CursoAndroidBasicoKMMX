@@ -20,6 +20,10 @@ public class DBHelper extends SQLiteOpenHelper {
             "nombre TEXT, " +
             "edad INTEGER, " +
             "domicilio TEXT ); ";
+    String query = "CREATE TABLE `Curso` (\n" +
+            "\t`id`\tINTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,\n" +
+            "\t`nombre`\tTEXT NOT NULL\n" +
+            ");"
 
     public DBHelper(Context context) {
         super(context, DBNAME, null, DBVERSION);
