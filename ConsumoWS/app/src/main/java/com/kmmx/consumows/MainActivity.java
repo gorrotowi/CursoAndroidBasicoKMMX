@@ -1,5 +1,6 @@
 package com.kmmx.consumows;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -79,6 +80,14 @@ public class MainActivity extends AppCompatActivity {
                 //enviar a una nueva vista
                 //en la nueva vista desplegar la informacion basica de esa compañia en su json, location, stations, etc
                 //plus el item de la segunda lista sea custom plus plus si usan recyclerview
+//                TextView textView = (TextView) view.findViewById(android.R.id.text1);
+//                Toast.makeText(MainActivity.this, textView.getText().toString(), Toast.LENGTH_SHORT).show();
+
+                companyUrl = baseurl + urlcompanys.get(position);
+                Log.e(TAG, "onItemClick: " + companyUrl);
+                Intent intent = new Intent(MainActivity.this, DetailCompany.class);
+                intent.putExtra("urlcompany", companyUrl);
+                startActivity(intent);
             }
         });
 
